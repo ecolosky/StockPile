@@ -1,0 +1,51 @@
+li.glyphicon {
+text-align: center;
+font-size: 4.0em;
+color: #666666;
+}
+a.nav-link.ng-binding {
+font-size: 28;
+}
+.container {
+width: 100vw;
+text-align: center;
+height: 8vh;
+}
+div#main {
+height: 92.0vh;
+}
+ul.nav.nav-pills {
+text-align: center;
+/* align-items: center; */
+display: inline-block;
+}
+
+/*restrict body size*/
+body.ng-scope {
+height: 100vh;
+}
+li.glyphicon {
+text-align: center;
+font-size: 4.0em;
+width: 18vw;
+padding-top: 1vh;
+}
+li.glyphicon.glyphicon-shopping-cart.uib-tab.nav-item.uib-tab.nav-item {
+width: 215px;
+}
+.navbar-default {
+background-color: #1a1a1a;
+border-color: #0d0d0d;
+}
+a.nav-link.ng-binding {
+color: #ffffff;
+font-family: 'Roboto Slab', serif;
+margin-top: 1vh;
+}
+nav.navbar.navbar-default {
+margin-bottom: 0px;
+}
+@media (min-width: 768px)
+.navbar {
+border-radius: 0px;
+}

@@ -1,0 +1,48 @@
+<!-- ================================================================
+			  HTML Script
+			  Ed Colosky
+			  April, 2016
+================================================================= -->
+<html ng-app="app">
+	<head>
+		<title>StockPile</title>
+
+
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="angular-ui-bootstrap/dist/ui-bootstrap-csp.css" />
+		<link rel="stylesheet" href="style.css" />
+
+	</head>
+	<body ng-controller = "mainCtrl">
+		<!-- site wraper -->
+		<div id="main">
+
+			<!-- where angular will inject code -->
+			<div ng-view></div>
+
+		</div>
+
+		<!-- bottom navbar -->
+		<header>
+		  <nav class="navbar navbar-default">
+		    <div class="container">
+					<uib-tabset active="activePill" vertical="false" type="pills">
+						<uib-tab class="{{tab.icon}}" ng-repeat="tab in tabs" heading="{{tab.title}}"
+      					active="tab.active" select="changeTab(tab.href)" >
+
+						</uib-tab>
+				  </uib-tabset>
+		    </div>
+		  </nav>
+		</header>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+		<script type="text/javascript" src = "angular-route/angular-route.min.js"></script>
+		<script type="text/javascript" src = "angular-animate/angular-animate.min.js"></script>
+		<script type="text/javascript" src="angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
