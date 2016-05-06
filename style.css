@@ -1,19 +1,64 @@
-li.glyphicon {
+.glyphicon {
 text-align: center;
-font-size: 4.0em;
+font-size: 2.4em;
+padding-bottom: .7vh;
+/*color: #666666;*/
+}
+a {
 color: #666666;
+margin-left: 1vw;
+margin-right: 1vw;
 }
-a.nav-link.ng-binding {
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #1a1a1a;
+  background-color: #208000;
+}
+/*a.nav-link.ng-binding {
 font-size: 28;
-}
+}*/
 .container {
-width: 100vw;
+width: 100%;
 text-align: center;
-height: 8vh;
+padding-left: 0px;
+padding-right: 0px;
+height: 100%;
+
 }
 div#main {
-height: 92.0vh;
+/*height: 91vh;*/
 }
+.PageContainer{
+  margin-top: 9.0vh;
+  margin-bottom: 9.0vh;
+  /*height: 91vh;*/
+}
+li.list-group-item.ng-binding.ng-scope {
+  font-family: 'Roboto Slab', serif;
+  color: #666666;
+}
+
+.list-group-item:first-child {
+ border-top-left-radius: 0px;
+ border-top-right-radius: 0px;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+z-index: 2;
+color: #fff;
+background-color: teal;
+border-width: 0;
+border-color: lime;
+}
+h2{
+  color: #666666;
+  margin-top: 1.5vh;
+  font-family: 'Roboto Slab', serif;
+}
+h3{
+  color: #1a1a1a;
+  margin-top: 1.5vh;
+  font-family: 'Roboto Slab', serif;
+}
+
 ul.nav.nav-pills {
 text-align: center;
 /* align-items: center; */
@@ -22,29 +67,32 @@ display: inline-block;
 
 /*restrict body size*/
 body.ng-scope {
+  width: 100vw;
 height: 100vh;
 }
-li.glyphicon {
-text-align: center;
-font-size: 4.0em;
-width: 18vw;
-padding-top: 1vh;
-}
-li.glyphicon.glyphicon-shopping-cart.uib-tab.nav-item.uib-tab.nav-item {
-width: 215px;
-}
+
+
 .navbar-default {
 background-color: #1a1a1a;
 border-color: #0d0d0d;
+margin-bottom: 0px;
+height: 9vh;
 }
-a.nav-link.ng-binding {
+/*a.nav-link.ng-binding {
 color: #ffffff;
 font-family: 'Roboto Slab', serif;
-margin-top: 1vh;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 2px;
+padding-bottom: 2px;
 }
 nav.navbar.navbar-default {
 margin-bottom: 0px;
 }
+li.uib-tab.nav-item {
+width: 17vw;
+}*/
+
 @media (min-width: 768px)
 .navbar {
 border-radius: 0px;

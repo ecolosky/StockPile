@@ -7,7 +7,7 @@
 	<head>
 		<title>StockPile</title>
 
-
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet" type="text/css">
 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -17,6 +17,11 @@
 
 	</head>
 	<body ng-controller = "mainCtrl">
+		<nav class="navbar navbar-default navbar-fixed-top">
+	    <div class="container">
+				<h2>{{title}}</h2>
+	    </div>
+	  </nav>
 		<!-- site wraper -->
 		<div id="main">
 
@@ -26,18 +31,19 @@
 		</div>
 
 		<!-- bottom navbar -->
-		<header>
-		  <nav class="navbar navbar-default">
-		    <div class="container">
-					<uib-tabset active="activePill" vertical="false" type="pills">
-						<uib-tab class="{{tab.icon}}" ng-repeat="tab in tabs" heading="{{tab.title}}"
-      					active="tab.active" select="changeTab(tab.href)" >
+	  <nav class="navbar navbar-default navbar-fixed-bottom">
+	    <div class="container">
+				<uib-tabset active="activePill" vertical="false" type="pills">
+					<uib-tab ng-repeat="tab in tabs" active="tab.active" select="changeTab(tab)" justified = "true">
+							<uib-tab-heading>
+								<i class = "{{tab.icon}}"></i>
+								<!-- <h4>{{tab.title}}</h4> -->
+							</uib-tab-heading>
 
-						</uib-tab>
-				  </uib-tabset>
-		    </div>
-		  </nav>
-		</header>
+					</uib-tab>
+			  </uib-tabset>
+	    </div>
+	  </nav>
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
 		<script type="text/javascript" src = "angular-route/angular-route.min.js"></script>

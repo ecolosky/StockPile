@@ -1,0 +1,14 @@
+<!-- =============================================================================
+          HTML Inventory Page
+          Ed Colosky
+          April, 2016
+============================================================================= -->
+<div class="PageContainer" ng-controller = "inventoryCtrl">
+  <ul ng-repeat = "x in inventory" class="list-group">
+    <li class="list-group-item active"><h3>{{x.head}}</h3></li>
+    <li ng-repeat = "i in x.items" class="list-group-item">
+       <span class="label label-default label-pill pull-right">{{i.count}}</span>
+      {{i.item}}
+    </li>
+  </ul>
+</div>
