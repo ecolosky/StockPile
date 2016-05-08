@@ -17,9 +17,9 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
             })
 
             // route for the gallery page
-            .when('/gallery', {
-                templateUrl : 'pages/gallery.html',
-                controller  : 'galleryCtrl'
+            .when('/list', {
+                templateUrl : 'pages/list.html',
+                controller  : 'listCtrl'
             })
 
             // route for the stories page
@@ -58,16 +58,46 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
           items: [
             {item: "apples", count: "2"},
             {item: "bannannas", count: "6"},
-            {item: "oranges", count: "1"},
+            {item: "oranges",class: "-danger" ,count: "1"},
             {item: "strawberries", count: "1 Qt."}
           ]
         },
         {head: "Meat",
           items: [
-            {item: "chicken", count: "5 lbs"},
+            {item: "chicken",class: "-warning" ,count: "5 lbs"},
             {item: "pork tenderloin", count: "3 lbs"},
             {item: "bacon", count: "1.5 lbs"},
             {item: "chicken sausage", count: "5 links"}
+          ]
+        },
+        {head: "Beverages",
+          items: [
+            {item: "beer", count: "2.5 gal"},
+            {item: "wine", count: "2.25 L"},
+            {item: "milk", count: "0.5 gal"},
+            {item: "pepsi", count: "2 L"}
+          ]
+        }
+      ];
+
+
+    });
+
+    app.controller('listCtrl',function($scope){
+      $scope.list = [
+        {head: "Produce",
+          items: [
+            {item: "bannannas", count: "6"},
+            {item: "oranges",class: "-success" ,count: "1"},
+            {item: "strawberries", count: "1 Qt."}
+          ]
+        },
+        {head: "Meat",
+          items: [
+            {item: "chicken",class: "" ,count: "5 lbs"},
+            {item: "pork tenderloin", count: "3 lbs"},
+            {item: "bacon", count: "1.5 lbs"},
+            {item: "chicken sausage",class: "-success" , count: "5 links"}
           ]
         },
         {head: "Beverages",
