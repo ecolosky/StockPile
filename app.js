@@ -23,9 +23,9 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
             })
 
             // route for the stories page
-            .when('/stories', {
-                templateUrl : 'pages/stories.html',
-                controller : 'storyCtrl'
+            .when('/add', {
+                templateUrl : 'pages/add.html',
+                controller : 'ModalDemoCtrl'
             })
             // route for the chapter history
             .when('/ChapterHistory', {
@@ -51,6 +51,41 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
         $scope.title = data.title;
       };
     });
+    //add controller
+    app.controller('ModalDemoCtrl',function($scope, $uibModal, $log){
+      // modal instance created
+
+      $scope.open = function(){
+        var modalInstance = $uibModal.open({
+          animation: 'true',
+          templateUrl: 'ModalContent.html',
+          controller: 'ModalInstanceCtrl',
+          size: 'lg'
+
+        });
+      };
+
+    });
+    //modal controller for the instance
+    app.controller('ModalInstanceCtrl', function($scope, $uibModalInstance, $log){
+      $scope.cats = ['fruits', 'vegetables', 'meats', 'beverage', 'bakery', 'baking supplies'];
+      $scope.temp = $scope.cats[0];
+      $scope.item = {
+        name: '',
+        qty: 0,
+        date: ''
+      };
+
+      $scope.ok = function () {
+        $uibModalInstance.close($scope.item);
+      };
+
+      $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+      };
+    });
+
+    //inventory ctrl
     app.controller('inventoryCtrl',function($scope){
       $scope.title = "Inventory";
       $scope.inventory = [
@@ -82,7 +117,7 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
 
 
     });
-
+    //shopping list controller
     app.controller('listCtrl',function($scope){
       $scope.list = [
         {head: "Produce",
