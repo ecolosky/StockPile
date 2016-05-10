@@ -1,0 +1,32 @@
+<!-- =============================================================================
+          HTML Inventory Page
+          Ed Colosky
+          May, 2016
+============================================================================= -->
+<div class="PageContainer" ng-controller = "addCtrl">
+  <div ng-controller="ModalDemoCtrl">
+      <script type="text/ng-template" id="ModalContent.html">
+          <div class="modal-header">
+              <h3 class="modal-title">Add a food item to your inventory</h3>
+          </div>
+          <div class="modal-body">
+              <ul>
+                  <li ng-repeat="item in items">
+                      <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                  </li>
+              </ul>
+              Selected: <b>{{ selected.item }}</b>
+          </div>
+          <div class="modal-footer">
+              <button class="btn btn-primary" type="button" ng-click="ok()">Enter</button>
+              <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+          </div>
+      </script>
+
+      
+      <button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
+      <button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
+      <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+      <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+  </div>
+</div>
