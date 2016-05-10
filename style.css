@@ -38,7 +38,7 @@ li.list-group-item.ng-binding.ng-scope {
 }
 /*Danger list item*/
 .list-group-item-danger {
-color: #a94442;
+color: #933b39;
 background-color: #d39292;
 position: relative;
 display: block;
@@ -48,7 +48,7 @@ border: 1px solid #ddd;
 }
 /*warning list item*/
 .list-group-item-warning {
-color: #8a6d3b;
+color: #6b552e;
 background-color: #f0dc75;
 position: relative;
 display: block;
@@ -58,8 +58,17 @@ border: 1px solid #ddd;
 }
 /*success list item*/
 .list-group-item-success {
-color: #3c763d;
+color: #336634;
 background-color: #a4d491;
+position: relative;
+display: block;
+padding: 10px 15px;
+/*margin-bottom: -1px;*/
+border: 1px solid #ddd;
+}
+.list-group-item-info {
+color: #31708f;
+background-color: #d9edf7;
 position: relative;
 display: block;
 padding: 10px 15px;
@@ -80,7 +89,7 @@ margin-bottom: 10px;
 .list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
 z-index: 2;
 color: #fff;
-background-color: rgba(32, 128, 0, .6);
+background-color: rgba(32, 128, 0, .73);
 border-width: 1;
 border-color: #1a1a1a;
 }
@@ -94,6 +103,7 @@ border-color: #1a1a1a;
 button.btn.btn-primary.btn-lg {
     margin-top: 15;
         width: 70vw;
+        font-family: 'Roboto Slab', serif;
 }
 /*==============================================modal css=======================*/
 input.form-control {
