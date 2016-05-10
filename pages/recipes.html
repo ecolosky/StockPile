@@ -1,0 +1,20 @@
+<!-- =============================================================================
+          HTML Inventory Page
+          Ed Colosky
+          May, 2016
+============================================================================= -->
+<div class="PageContainer" ng-controller = "recipesCtrl">
+  <ul class="list-group">
+      <li ng-repeat = "r in recipes" class="list-group-item">
+        <div class="row">
+          <div class="col-xs-8">
+            {{r.name}}
+          </div>
+          <div class="col-xs-4">
+            <uib-progressbar class="progress-striped active" value="r.percent" type={{r.type}}>{{r.percent}}%</uib-progressbar>
+          </div>
+        </div>
+      </li>
+
+  </ul>
+</div>

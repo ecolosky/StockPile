@@ -9,22 +9,24 @@
             <h3 class="modal-title">Add a food item to your inventory</h3>
         </div>
         <div class="modal-body">
-          <div class = "row">
-            <div class = "col-xs-offset-1 col-xs-8"
+
               Item: <input type = "text" ng-model = "item.name" class = "form-control"/>
               Category: <select class="form-control" ng-model="temp" ng-options="f for f in cats"><option></option></select>
               Qty: <input type = "number" ng-model = "item.qty" class = "form-control"/>
               Date: <input type = "text" ng-model = "item.date" uib-date-picker = 'yyyy/MM/dd' class = "form-control"/>
 
-          </div>
         </div>
         <div class="modal-footer">
             <button class="btn btn-primary" type="button" ng-click="ok()">Add</button>
             <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
         </div>
     </script>
-      <div class = "col-xs-offset-2 col-xs-10">
-        <button type="button" class="btn btn-primary" ng-click="open()">Manually add food item</button>
+    <div class="row body">
+      <div class = "col-xs-offset-1 col-xs-10">
+        <button type="button" class="btn btn-primary btn-lg" ng-click="open()">Add a food item</button>
+        <button type="button" class="btn btn-primary btn-lg">Add a meal</button>
+        <button type="button" class="btn btn-primary btn-lg" >Scan receipt</button>
+      </div>
     </div>
 
 </div>

@@ -32,8 +32,9 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
                 templateUrl : 'pages/ChapterHistory/index.html'
             })
             // route for the stories page
-            .when('/links', {
-                templateUrl : 'pages/links.html'
+            .when('/recipes', {
+                templateUrl : 'pages/recipes.html',
+                controller: 'recipesCtrl'
             });
     });
     //main controller
@@ -51,6 +52,34 @@ var app = angular.module('app', ['ui.bootstrap','ngRoute','ngAnimate']);
         $scope.title = data.title;
       };
     });
+
+    app.controller('recipesCtrl', function($scope){
+      $scope.recipes = [
+        {name: 'Salmon with Maple Dijon Glaze', percent: 94, type: 'success'},
+        {name: 'Fresh Herbed Chicken Breasts', percent: 92, type: 'success'},
+        {name: 'Roast Turkey Breast with Chipotle Chili Sauce', percent: 85, type: 'success'},
+        {name: 'Spicy Black Bean Burrito', percent: 78, type: 'success'},
+        {name: 'Warm Quinoa Salad', percent: 72, type: 'info'},
+        {name: 'Halibut with Ginger and Scallions', percent: 66, type: 'info'},
+        {name: 'Pasta with Clams', percent: 58, type: 'info'},
+        {name: 'Zesty Mexican Soup', percent: 44, type: 'warning'},
+        {name: 'Baked Jalapeño Poppers', percent: 42, type: 'warning'},
+        {name: 'Skinny Creamy Chicken Enchiladas', percent: 35, type: 'warning'},
+        {name: 'Rosemary Flatbread', percent: 30, type: 'warning'},
+        {name: 'Poutine', percent: 22, type: 'danger'},
+        {name: 'Orange Sugared Cranberries', percent: 16, type: 'danger'},
+        {name: 'New England Clam Chowder', percent: 14, type: 'danger'},
+        {name: 'Mexican Pulled Chicken', percent: 10, type: 'danger'},
+        {name: 'Fish Tacos', percent: 8, type: 'danger'},
+        {name: 'Creamy Chicken and Rice Soup', percent: 8, type: 'danger'},
+        {name: 'Italian Chili', percent: 4, type: 'danger'},
+        {name: 'Cornbread', percent: 4, type: 'danger'},
+        {name: 'Chocolate Chip Scones', percent: 2, type: 'danger'},
+        {name: 'New England Lobster Roll', percent: 2, type: 'danger'},
+        {name: 'Mediterranean Flatbread', percent: 2, type: 'danger'},
+      ]
+    });
+
     //add controller
     app.controller('ModalDemoCtrl',function($scope, $uibModal, $log){
       // modal instance created
